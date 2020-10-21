@@ -5,19 +5,22 @@ package dataStructures.src;
  * @date 2020/10/9
  */
 
-public class SingleList {
-    public Integer date;
-    public SingleList next;
+public class SingleList<T> {
+    /*
+      单链表
+     */
+    public T date; //数值
+    public SingleList next; //下个指针
 
-    public SingleList(Integer date) {
+    public SingleList(T date) {
         this.date = date;
     }
 
-    public int getDate() {
+    public T getDate() {
         return date;
     }
 
-    public void setDate(int date) {
+    public void setDate(T date) {
         this.date = date;
     }
 
@@ -39,15 +42,13 @@ public class SingleList {
         return new SingleList(null);
     }
 
-    public static SingleList creatList(int[] arr) {
-        SingleList head = new SingleList(null);
-        for (int i : arr) {
-            head.addElement(i);
+    public void  creatList(Object[] arr) {
+        for (Object i : arr) {
+            this.addElement((T) i);
         }
-        return head;
     }
 
-    public void addElement(int num) {
+    public void addElement(T num) {
         SingleList singleList = new SingleList(num);
         SingleList P = this;
         while (P.next != null) {
@@ -58,7 +59,7 @@ public class SingleList {
     }
 
     public void insertElement(int InsertIndex, int date) throws Exception {
-        if (this.next == null) {
+        if ((this.next == null) && (InsertIndex > 0)) {
             throw new Exception("list is empty");
         } else {
             SingleList singleList = new SingleList(date);

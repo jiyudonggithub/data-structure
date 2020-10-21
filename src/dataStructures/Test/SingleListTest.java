@@ -2,6 +2,8 @@ package dataStructures.Test;
 
 import dataStructures.src.SingleList;
 
+import java.util.ArrayList;
+
 /**
  * @author 季于东
  * @date 2020/10/9
@@ -9,6 +11,7 @@ import dataStructures.src.SingleList;
 public class SingleListTest {
     public static void main(String[] args) {
         int[] arr = {5, 8, 9, 10, 3, 6, 45};
+        new ArrayList<Integer>();
         SingleList head = SingleList.creatList();
         for (int i : arr) {
             head.addElement(i);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stdents>
+	<stdent>
+		<name>lucy</name>
+		<brithday>1996-12-24</brithday>
+	</stdent>
+	<stdent>
+		<name>tom</name>
+		<brithday day = "13">1996-12-15</brithday>
+	</stdent>
+</stdents>
